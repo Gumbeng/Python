@@ -3,7 +3,7 @@ use hr;
 
 DROP TABLE IF EXISTS emp;
 CREATE TABLE emp(
-    emp_id 		INT PRIMARY KEY,       -- 직원 ID
+    emp_id 		INT UNSIGNED PRIMARY KEY,       -- 직원 ID
     emp_name 	VARCHAR(20) NOT NULL,  -- 직원 이름
     job 		VARCHAR(35) NOT NULL,  -- 담당 업무
     mgr_id 		INT,                   -- 상사의 직원 ID
@@ -122,4 +122,11 @@ INSERT INTO emp (emp_id,emp_name,job,mgr_id,hire_date,salary,comm_pct,dept_name)
 INSERT INTO emp (emp_id,emp_name,job,mgr_id,hire_date,salary,comm_pct,dept_name) VALUES (205,'Shelley','AC_MGR',101,CAST('02/06/07' AS DATE),12008,null,'Accounting');
 INSERT INTO emp (emp_id,emp_name,job,mgr_id,hire_date,salary,comm_pct,dept_name) VALUES (206,'William','AC_ACCOUNT',205,CAST('02/06/07' AS DATE),8300,null,'Accounting');
 commit;
+
+
 select * from emp;
+
+
+
+
+
