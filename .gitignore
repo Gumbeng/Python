@@ -1,7 +1,15 @@
+cats_and_dogs_small/
+cats_and_dogs_small.zip
+datasets/
+saved_model/
+saved_dir/
+save_files/
+saved_data/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+*.csv
 
 # C extensions
 *.so
