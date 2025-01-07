@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h2>반복문 예제</h2>
+        <script>
+            // 반복문 : while, for , do while, for in
+
+            function whileExam(num) {
+                list = []; //빈 배열
+                while (num < 10) {
+                    list.push(num); // 배열에 값을 추가.
+                    num++; // 증감식 -> 조건에서 사용하는 값을 변경.
+                }
+                alert(list);
+            }
+            // whileExam(1);
+
+            function forExam() {
+                list = [];
+                // 초기식: for문 시작시 한번 실행.
+                // 조건식: 반복 전에 조건체크
+                // 증감식: 반복이 끝나면 실행.
+                for (let num = 1; num < 10; num++) {
+                    list.push(num);
+                }
+                alert(list);
+            }
+            // forExam()
+
+            function doWhileExam() {
+                list = [];
+                do {
+                    num = parseInt(
+                        prompt("짝수를 입력하세요. 홀수입력시 종료합니다.")
+                    );
+                    if (num % 2 != 0) {
+                        break;
+                    }
+                    list.push(num);
+                } while (true);
+                alert(list);
+            }
+            
+            // doWhileExam()
+
+            function forInExam() {
+                list = ["a", "b", "c", "d", "e"];
+                // 배열 index: 0 부터 시작.
+
+                for (idx in list) {  // index를 반환.
+                    console.log(idx + "," + list[idx]);
+                }
+            }
+            // forInExam()
+
+            function forInExam2() {
+                info = {
+                    name: "홍길동",
+                    age: 20,
+                };
+                // 객체의 속성(propery)조회- .표기법, index.
+                console.log(info.age, info["age"]); 
+                for (key in info) {
+                    console.log(key + "," + info[key]);
+                }
+            }
+            forInExam2()
+        </script>
+    </body>
+</html>
